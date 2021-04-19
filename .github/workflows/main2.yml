@@ -12,7 +12,7 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
     - name: tomcat deploy
-      run: curl -v -u ${{ secrets.TOM_USERNAME }}:${{ secrets.TOM_PASSWORD }} -T /home/runner/work/spring3-mvc-maven-xml-hello-world/spring3-mvc-maven-xml-hello-world/target/spring3-mvc-maven-xml-hello-world-1.4.war 'http://3.82.221.43:8080/manager/text/deploy?path=/endtoend'
+      run: curl -v -u ${{ secrets.TOM_USERNAME }}:${{ secrets.TOM_PASSWORD }} -T /home/runner/work/spring3-mvc-maven-xml-hello-world/spring3-mvc-maven-xml-hello-world/target/spring3-mvc-maven-xml-hello-world-1.4.war 'http://http://3.87.239.69/:8080/manager/text/deploy?path=/endtoend'
     - name: Configure AWS Credentials
       uses: aws-actions/configure-aws-credentials@v1
       with:
